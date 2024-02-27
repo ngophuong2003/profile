@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Linh Tinh/Log in</title>
+    <!--Gán file base và main-->
+    <link rel="stylesheet" href="./document/css/base.css">
+    <link rel="stylesheet" href="./document/css/main.css">
+    <!--Reset CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--Phông chữ-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--Font Icon-->
+    <link rel="stylesheet" href="./document/font/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--seperate">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-house"></i>
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Theo dõi báo trên</span>
+                            <!--Icon-->
+                            <a href="" class="header__navbar-icon-link">
+                                <!--Facebook-->
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <!--Instagram-->
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <!--Twitter-->
+                                <i class="header__navbar-icon fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-circle-info"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--seperate">Đăng kí</li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Tên trang-->
+            <div class="name-page">
+                <h1 class="name-page__one">TIN LINH TINH</h1>
+            </div>
+            <!--Thanh tìm kiếm-->
+            <div class="search">
+                <div class="search-icon">
+                    <i class="search-icon__icon fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search-form">
+                    <input type="text" class="search-form_input" placeholder="Tìm kiếm...">
+                </div>
+                
+                <div class="search-icon">
+                    <i class="search-icon__icon fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            
+            <div class="line"></div> 
+
+            <!--Danh mục tin tức-->
+            <div class="menu">
+                <ul class="menu_list">
+                    <li class="menu_item">Thời sự</li>
+                    <li class="menu_item">Thế giới</li>
+                    <li class="menu_item">Kinh tế</li>
+                    <li class="menu_item">Đời sống</li>
+                    <li class="menu_item">Sức khỏe</li>
+                    <li class="menu_item">Giáo dục</li>
+                    <li class="menu_item">Du lịch</li>
+                    <li class="menu_item">Văn hóa</li>
+                    <li class="menu_item">Thể thao</li>
+                    <li class="menu_item">Khoa học - Công nghệ</li>
+                    <li class="menu_item">Khác</li>
+                </ul>
+            </div>
+
+            <!--Form Đăng nhập-->
+            <div class="login">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">Đăng ký</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập email">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                        </div>
+                        
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <span class="auth-form__help-seperate"></span>
+                            <a href="" class="auth-form__help-link">Cần hỗ trợ ?</a>
+                        </div>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn  btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                        <span class="auth-form__socials-title">
+                            Đăng nhập với Facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form__socials-title">
+                            Đăng nhập với Google
+                        </span>
+                    </a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

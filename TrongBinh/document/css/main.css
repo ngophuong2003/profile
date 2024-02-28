@@ -1,0 +1,101 @@
+:roof {
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--white-color);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+h2 {
+    margin: 15px;
+}
+
+.profile {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+
+}
+
+.profile__info {
+    margin: 0;
+    padding: 0 20px;
+    flex: 1;
+    background-color:rgb(245, 239, 233);
+}
+
+.profile__info--myinfo {
+    width: 100%;
+    display: flex;
+    
+}
+
+.myinfo-img {
+    width: 110px;
+    height: auto;
+    margin: 0px 50px 30px 15px;
+}
+
+.profile__info-list {
+    
+}
+
+.profile__info-item {
+    list-style: none;
+    line-height: 30px;
+    font-size: 20px;
+
+}
+
+.profile__content {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__content-one {
+    background-color:rgb(248, 217, 206);
+    margin: 0;
+    padding: 0;
+}
+
+.profile__content-two {
+    background-color: rgb(211, 245, 233);
+    margin-top: 0;
+}
+
+.profile__info-link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.btn:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.profile__info-icon {
+    font-size: 23px;
+}

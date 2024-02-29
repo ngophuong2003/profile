@@ -1,0 +1,22 @@
+.profile-flex {
+        margin: 0;
+        padding: 0 20px;
+        flex: 50%;
+}
+.profile {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+.profile__content {
+    flex: 50%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.profile-name {
+    font-size: 30px;
+}

@@ -1,22 +1,158 @@
-.profile-flex {
-        margin: 0;
-        padding: 0 20px;
-        flex: 50%;
-}
-.profile {
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #f2f3f7;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-}
-.profile__content {
-    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .profile_left {
+  
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("anh3.jpg");
+  
+  }
+  
+  .profile_right {
+    border-bottom-right-radius: 50px;
+    padding: 30px;
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-.profile-name {
+  
+  }
+  
+  .profile-name {
     font-size: 30px;
-}
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: white;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 1.7fr;
+  }
+  
+  img {
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: 70px;
+    bottom: 50px;
+  
+  }
+  
+  .info {
+    display: inline-block;
+    width: 30px;
+    right: 10px;
+    font-size: 18px;
+    color: black;
+  }
+  
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:16px; 
+  }
+  
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  
+  .noto-mong {
+    padding: 90px 0 0 0;
+    margin: 0px;
+    font-family: "Noto Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  .noto-truong {
+    font-family: "Noto Serif", serif;
+    margin: 10px 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+  
+  h3 {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+  
+  }
+  
+  .roboto-light-ul {
+    padding-top: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:16px; 
+  }
+  
+  video {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .progress {
+    width: 50%;
+    height: 10px;
+    background-color:black;
+  
+  }
+  .progess-grap {
+    width: 100%;
+    height: 10px;
+    background-color:#f2f3f7;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .tab{
+    margin-right: 300px;
+  }
+  .tab-cham{
+    margin-right: 30px;
+  }

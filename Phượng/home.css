@@ -1,0 +1,53 @@
+body {
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+.video {
+    position:absolute;
+    width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+}
+h1{
+    position: relative;
+    font-size: 8em;
+    text-transform: capitalize;
+    text-shadow: 0 0 20px #f1f1f1;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 90px;
+}
+
+h2 {
+    position: relative;
+    text-transform: capitalize;
+    text-shadow: 0 0 20px #f1f1f1;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 50px;
+}
+img {
+    border-radius: 50%;
+    position: relative;
+    right: 20px;
+    top: 30px; 
+  }
+
+.thanhvien {
+    position: relative;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.ok {
+    position: relative;
+}
+  

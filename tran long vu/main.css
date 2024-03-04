@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+
+:root{
+    --green:#54B192;
+    --green-l:#A4CEC0;
+    --gray: #3F3d56;
+
+    
+
+}

@@ -323,17 +323,27 @@
 }
 
 .auth-form__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 8px;
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .auth-form__heading {
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--black-color);
-}
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 35px; /* Chỉnh sửa kích thước chữ */
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    margin: 10px 0px;
+    padding: 10px;
+  
+    @media (max-width: 768px) {
+      font-size: 18px; /* Chỉnh sửa kích thước chữ cho thiết bị di động */
+    }
+  }
+  
 
 .auth-form__switch-btn {
     font-size: 2rem;
@@ -362,9 +372,10 @@
 }
 
 .auth-form__controls {
-    margin-top: 80px;
+    margin-top: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .auth-form__socials {

@@ -1,11 +1,12 @@
 const express = require("express")
 const app = express()
 const path=require('path')
-var bodyParser= require('body-parser')
+const bcrypt = require('bcrypt');
+const AccountModel=require('./connect/connectDB');
+var bodyParser= require('body-parser');
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
-const AccountModel=require('./connect/connectDB')
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json())
 app.use('/public', express.static(path.join(__dirname,'/public')))
 app.get('/', function(req, res) {
     var duongDan=path.join(__dirname,'/views/login.html')
@@ -26,65 +27,56 @@ app.post('/dangky',(req,res,next)=>{
     var password=req.body.password
     var email=req.body.email
     var rpassword=req.body.rpassword
-
-    AccountModel.findOne({
-        username:username
-    })
-    .then(data=>{
-        if(data){
-            var duongDan=path.join(__dirname,'/views/register.html')
-            res.sendFile(duongDan)
-        }
-        else{
-            var duongDan=path.join(__dirname,'/views/login.html')
-            res.sendFile(duongDan)
-            return AccountModel.create({
-                username:username,
-                password:password,
-                email:email    
-            })
-                
-            
-        }
-    })
+    
+    AccountModel.findOne({ username: username })
+   .then((data) => {
+    if (data) {
+        res.redirect("/dangky");
+    } else {
+        bcrypt.hash(password, 10, (err, hashPassword) => {
+            if (err) {
+                console.error(err)
+            } else {
+                AccountModel.create({
+                    username:username,
+                    password: hashPassword,
+                    email:email    
+                })
+                res.redirect("/");  
+            }
+        });
+    }
+  })
+  .catch((err) => {
+    // Xử lý lỗi truy vấn database
+    console.error("Lỗi truy vấn:", err);
+  });
+});
    
-    .catch(err=>{
-        res.status(500).json('Tạo tài khoản thất bại')
-    })
-})
 
 app.post('/',(req,res,next)=>{
     var username=req.body.username
     var password=req.body.password
-
-    AccountModel.findOne({
-        username:username,
-        password:password
-    })
-        
-    .then(data=>{
-        if(data){
-            console.log('2')
-            var duongDan=path.join(__dirname,'/views/index.html')
-            res.sendFile(duongDan)
+    AccountModel.findOne({username:username})   
+    .then(function(data){
+        console.log(data)
+        if(data) {
+            bcrypt.compare(password,data.password, function(err, result) {
+                if (result === true) {
+                    console.log('Mật khẩu khớp!');
+                    res.redirect('/trangchu');
+                  } else {
+                    console.log('Mật khẩu không khớp!');
+                    res.redirect('/');
+                  }
+            });
+           
         }
-        else{
-            console.log('1')
-            var duongDan=path.join(__dirname,'/views/login.html')
-            res.sendFile(duongDan)
-            res.status(300).json('Thông tin tài khoản hoặc mật khẩu không chính xac')
-        }
+        else res.redirect('/');
     })
- 
-    .catch(err=>{
-        res.status(500).json('Server bị lỗi')
-    })
-})
-
-
-
-
-app.listen(3333,function(){
+    
+});
+app.listen(3000,function(){
 
 })
 

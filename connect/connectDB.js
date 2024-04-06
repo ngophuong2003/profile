@@ -1,9 +1,5 @@
 
 const mongoose = require('mongoose');
-// or as an es module:
-// import { MongoClient } from 'mongodb'
-
-// Connection URL
 mongoose.connect('mongodb://localhost:27017/webproject',{
   useNewUrlParser:true,
   useUnifiedTopology:true
@@ -20,6 +16,7 @@ const AccountSchema= new Schema({
 },{
   collection:'phuong'
 });
+
 const AccountModel = mongoose.model('phuong', AccountSchema)
 
 module.exports=AccountModel

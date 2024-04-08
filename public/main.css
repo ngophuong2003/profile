@@ -179,6 +179,12 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.menu_item-news {
+  text-decoration: none; 
+  color: black; 
+  font-size: 15px;
+}
+
 .menu_item:hover {
   color: rgb(109, 105, 105);
   cursor: pointer; /*tạo hình ngón tay trỏ*/

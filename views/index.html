@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tin Linh Tinh</title>
     <!--Gán file base và main-->
-    <link rel="stylesheet" href="./public/base.css">
-    <link rel="stylesheet" href="./public/main.css">
+    <link rel="stylesheet" href="../public/base.css">
+    <link rel="stylesheet" href="../public/main.css">
     <!--Reset CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!--Phông chữ-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--Font Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JS -->
+    <script src="../public/script.js"></script>
 </head>
 <body>
     <div class="page">
         <!--Phần đầu: Tiêu đề và thông tin của trang-->
         <div class="header">
             <!--Thông tin trang và thông tin người dùng-->
-            <div class="grid">
+            <div class="grid" id="headerTop">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--seperate">
-                            <a href="" class="header__navbar-item-link">
+                            <a href="" class="header__navbar-item-link" id="home">
                                 <i class="header__navbar-icon fa-solid fa-house"></i>
                                 Trang chủ
                             </a>
@@ -78,7 +80,7 @@
                 <h1 class="name-page__one">TIN LINH TINH</h1>
             </div>
             <!--Thanh tìm kiếm-->
-            <div class="search">
+            <div class="search" id="searchContainer">
                 <div class="search-icon" id="menuIcon">
                     <i class="search-icon__icon fa-solid fa-bars"></i>
                 </div>
@@ -121,7 +123,33 @@
                 </script>
             
             <div class="line"></div> 
-
+            
+            <div id="myCat" class="overlay">
+                <!-- Nút đóng category -->
+                <span class="closebtn" >&times;</span>
+              
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                  <a href="#" id="thoisu" class="category">Thời sự</a>
+                  <a href="#" id="thegioi" class="category">Thế giới</a>
+                  <a href="#" id="kinhte" class="category">Kinh tế</a>
+                  <a href="#" id="doisong" class="category">Đời sống</a>
+                  <a href="#" id="suckhoe" class="category">Sức khỏe</a>
+                  <a href="#" id="giaoduc" class="category">Giáo dục</a>
+                  <a href="#" id="dulich" class="category">Du lịch</a>
+                  <a href="#" id="vanhoa" class="category">Văn hóa</a>
+                  <a href="#" id="thethao" class="category">Thể thao</a>
+                  <a href="#" id="congnghe" class="category">Công nghệ</a>
+                  <a href="#" id="xe" class="category">Xe</a>
+                  <a href="#" id="thoitrang" class="category">Thời trang</a>
+                </div>
+              
+              </div>
+              <!-- Modal Image -->
+              <div id="myModal" class="modal">
+                <!-- <span class="close">&times;</span> -->
+                <img class="modal-content" id="img01">
+              </div>
             <!--Danh mục tin tức-->
             <div class="menu">
                 <ul class="menu_list">
@@ -166,7 +194,7 @@
 
             <div class="line"></div>
             <!--Content2-->
-            <div class="new-point">
+            <div class="new-point" id="congnghe_section">
                 <h2>CÔNG NGHỆ</h2>
             </div>
             <div class="conten-two">
@@ -195,19 +223,19 @@
 
             <div class="content-two__three">
                 <div class="content-two__three-one">
-                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/59205-120821-iphone15andplus-xl-1712281946538-1712281948072214921061.jpg" alt="">
+                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/59205-120821-iphone15andplus-xl-1712281946538-1712281948072214921061.jpg" alt="" id="myImg">
                     <h3 class="content__new">Màn hình viền mỏng của iPhone 16 gây khó cho các nhà cung cấp</h3>
                 </div>
                 <div class="content-two__three-two">
-                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17123026899271103591205.jpg" alt="">
+                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17123026899271103591205.jpg" alt="" id="myImg">
                     <h3 class="content__new">Có nên chọn mua nhẫn thông minh thay cho smartwatch?</h3>
                 </div>
                 <div class="content-two__three-three">
-                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/what-is-google-ai-search-a-step-by-step-guide-to-use-it-1712290074680-1712290075255550417119.jpg" alt="">
+                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/what-is-google-ai-search-a-step-by-step-guide-to-use-it-1712290074680-1712290075255550417119.jpg" alt="" id="myImg">
                     <h3 class="content__new">Người dùng sắp phải trả tiền để sử dụng Google Tìm kiếm tích hợp AI</h3>
                 </div>
                 <div class="content-two__three-four">
-                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17122986652561630581350.jpg" alt="">
+                    <img class="content-two__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17122986652561630581350.jpg" alt="" id="myImg">
                     <h3 class="content__new">Gigabyte giới thiệu mainboard và GPU mạ vàng cho game thủ giàu có</h3>
                 </div>
             </div>
@@ -230,7 +258,7 @@
 
             <div class="line"></div>
             <!--Content3-->
-            <div class="new-point">
+            <div class="new-point" id="thethao_section">
                 <h2>THỂ THAO</h2>
             </div>
             <div class="feature">
@@ -238,33 +266,33 @@
                     <h2 class="content__new">Huấn luận viên Erik TenHag nói gì sau trận thua sốc của M.u</h3>
                     <p class="feature-content">Theo HLV Erik ten Hag, việc các cầu thủ M.U để thua một trận đấu mà lẽ ra phải thắng là điều không thể chấp nhận được. 'Quỷ đỏ' dẫn trước Chelsea 3-2, nhưng để đối thủ thắng lại 4-3 trong các phút bù giờ, rạng sáng 5.4.</p>
                     <p class="feature-content">Trận thua ở vòng 31 giải Ngoại hạng Anh khiến M.U vẫn xếp thứ 6 với 48 điểm, kém Tottenham và Aston Villa xếp ngay trên lần lượt 9 và 11 điểm trong cuộc đua tranh vị trí dự Champions League. HLV Erik ten Hag thừa nhận: "Tôi không biết, liệu chúng tôi có còn cơ hội tranh vị trí này nữa hay không".</p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2024/4/5/hlv-erik-ten-hag--17122752724121205450074.jpeg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2024/4/5/hlv-erik-ten-hag--17122752724121205450074.jpeg" alt="" id="myImg">
                     <p class="feature-content">"Chúng tôi xứng đáng thắng trận này. Nhưng bạn không thể vứt đi những điểm số quý giá như chúng tôi đã làm. Chúng tôi khởi đầu tệ hại, để mất bóng và phòng ngự kém là nguyên nhân dẫn đến 2 bàn thua đầu tiên. Nhưng sau đó chúng tôi thống trị thế trận và thi đấu xuất sắc", HLV Erik ten Hag chia sẻ.</p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/980/528068263637045248/2024/4/3/mu-17121341045291332770706.jpg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/980/528068263637045248/2024/4/3/mu-17121341045291332770706.jpg" alt="" id="myImg">
                 </div>
                 <div class="feature-item">
                     <h2 class="content__new">M.U gục ngã trước cuộc ngược dòng điên rồ của Chelsea</h2>
                     <p class="feature-content">Cú hat-trick của Cole Palmer đã giúp Chelsea đánh bại M.U với tỷ số 4-3 trong trận đấu đầy kịch tính ở vòng 30 Ngoại hạng Anh diễn ra rạng sáng 5.4.</p>
                     <p class="feature-content">M.U tưởng như đã nắm trong tay một chiến thắng 3-2 sau khi lội ngược dòng từ việc bị dẫn 2-0, nhưng gục ngã đau đớn ở những phút bù giờ trong một trận đấu kịch tính với tổng cộng 47 cú sút. Palmer trở thành người hùng của đội chủ nhà khi san bằng tỷ số từ chấm phạt đền ở phút 90+10 và một phút sau ghi bàn ấn định chiến thắng 4-3.</p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/4/00034nl26b-17122703824011839200855.jpg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/4/00034nl26b-17122703824011839200855.jpg" alt="" id="myImg">
                     <p class="feature-content">Thất bại của M.U khiến họ kém đội xếp thứ 4 là Aston Villa 11 điểm khi giải chỉ còn 8 trận và phải đối mặt với việc không thể có vé dự Champions League mùa tới. Ngược lại, cuộc ngược dòng ngoạn mục trên sân Stamford Brigde đã nâng đoàn quân của HLV Mauricio Pochettino lên vị trí thứ 10 trên bảng xếp hạng, đồng thời thắp lại hy vọng tranh suất dự cúp châu Âu mùa tới.</p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2024/4/4/00034nl26n-17122703823471030932699.jpg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/thumb_w/640/528068263637045248/2024/4/4/00034nl26n-17122703823471030932699.jpg" alt="" id="myImg">
                     <p class="feature-content">Trước trận đấu này, Chelsea không thắng M.U trong 12 lần gặp nhau gần nhất ở Ngoại hạng Anh, nhưng sớm dẫn trước chỉ ở phút thứ 4 nhờ công của Conor Gallagher. Palmer nhân đôi cách biệt cho "The Blues" với quả phạt đền ở phút thứ 19 trước một M.U thiếu ổn định của HLV Erik Ten Hag.</p>
                 </div>
                 <div class="feature-item">
                     <h2 class="content__new">Vì sao Erling Haaland và De Bruyne đều vắng mặt ở trận thắng của Man City?</h2>
                     <p class="feature-content">HLV Pep Guardiola đã gây bất ngờ khi để 2 ngôi sao tấn công tốt nhất của Man City là Erling Haaland và De Bruyne ngồi dự bị trong trận thắng Aston Villa với tỷ số 4-1 rạng sáng 4.4.</p>
                     <p class="feature-content">Đây là quyết định gây nhiều ngạc nhiên của HLV Pep Guardiola, bởi Man City cần giành trọn 3 điểm trong trận đấu then chốt với Aston Villa sau 2 trận hòa liên tiếp trước Liverpool (1-1) và Arsenal (0-0), những đối thủ cạnh tranh trực tiếp ngôi vô địch Ngoại hạng Anh. Báo chí Anh nghi ngờ cả Erling Haaland và De Bruyne đều gặp vấn đề về phong độ.</p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/4/haaland--17121894955872077845220.jpeg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/4/haaland--17121894955872077845220.jpeg" alt="" id="myImg">
                     <p class="feature-content">Trước trận đấu, Haaland còn bị cựu danh thủ CLB M.U, Roy Keane chỉ trích màn trình diễn trong trận hòa Arsenal giống như "một cầu thủ giải League Two (giải hạng tư nước Anh)". HLV Pep Guardiola đã phải lên tiếng đáp trả để bảo vệ cầu thủ con cưng của mình. </p>
-                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/00034nh6zl-1712186252302603860450.jpg" alt="">
+                    <img class="feature-img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/00034nh6zl-1712186252302603860450.jpg" alt="" id="myImg">
                     <p class="feature-content">Nhà cầm quân người Tây Ban Nha khẳng định: "Haaland không ghi bàn (trận hòa Arsenal), là vì thiếu sự hỗ trợ của đồng đội ở các tình huống 1/3 cuối sân đối phương.</p>
                 </div>
             </div>
 
             <div class="line"></div>
             <!--Content4-->
-            <div class="new-point">
+            <div class="new-point" id="kinhte_section">
                 <h2>KINH TẾ</h2>
             </div>
             <div class="conten-four">
@@ -314,7 +342,7 @@
 
             <div class="line"></div>
             <!--Content5-->
-            <div class="new-point">
+            <div class="new-point" id="thoitrang_section">
                 <h2>THỜI TRANG</h2>
             </div>
             <div class="content-five">
@@ -322,21 +350,21 @@
                     <div class="content-five__one-one">
                         <h2 class="content__new">Phối đồ với quần ngắn khoe vẻ đẹp quyến rũ từ nhà xuống phố</h2>
                         <p class="feature-content">Bằng sự trẻ trung, nóng bỏng và thời thượng của mình, những thiết kế quần ngắn luôn tạo ra xu hướng riêng mà bất cứ nữ tín đồ thời trang nào cũng khó có thể chối từ. Mùa thời trang 2024 vốn đã tạo ra những ấn tượng mạnh mẽ bởi những chiếc quần siêu ngắn do các siêu mẫu, ngôi sao hạng A Hollywood chưng diện trên sàn catwalk, tới các thảm đỏ. Thế nhưng, vì "quá nóng" nó không dừng ở đó mà "tràn" vào không gian thời trang của các tín đồ văn phòng tạo ra những bản phối thời thượng, quyến rũ và hết sức ấn tượng.</p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/anh-4-1-17123053150441065681045.jpg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/anh-4-1-17123053150441065681045.jpg" alt="" id="myImg">
                         <p class="feature-content">Trên TikTok, những xu hướng thời trang dường như nổi bật hơn cả. Và hẳn nhiên, nó không thể thiếu các trào lưu phối đồ với quần shorts và culottes. Khẳng định đây là các loại quần sẽ làm "đổi vị" mùa hè, các TikToker tạo ra những set đồ biến đổi - nơi chỉ có mẫu quần ngắn làm trung tâm, khiến hầu hết các tín đồ thời trang cảm thấy kích thích và háo hức trải nghiệm. </p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/glassonalexstreetsmithstreetstylemelbourne-21-1712344995761977373489.jpeg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/glassonalexstreetsmithstreetstylemelbourne-21-1712344995761977373489.jpeg" alt="" id="myImg">
                         <p class="feature-content">Một set đồ với culottes tối giản với gam màu đen và xám tạo ra một phong cách phóng khoáng nhưng vẫn rất thanh lịch</p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/vsg03-a-black-pantsuit-with-culottes-a-neutral-tee-black-heels-and-a-backpack-for-a-masculine-feel-1712345086005265030009.jpg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/vsg03-a-black-pantsuit-with-culottes-a-neutral-tee-black-heels-and-a-backpack-for-a-masculine-feel-1712345086005265030009.jpg" alt="" id="myImg">
                         <p class="feature-content">Chiếc quần culottes ống rộng tạo thêm nét cá tính trong khi chiếc áo kiểu độc đáo cùng đôi bốt nổi bật tô điểm vẻ sang trọng cho bộ trang phục</p>
                     </div>
                     <div class="content-five__one-two">
                         <h2 class="content__new">7 đôi giày công sở 'phải có' trong tủ đồ mùa thời trang hè</h2>
                         <p class="feature-content">Cho dù ngày hôm nay của bạn là một cuộc họp quan trọng, một cuộc phỏng vấn hay chỉ là một ngày làm việc thông thường thì việc chọn một đôi giày công sở phù hợp, đẹp và thay đổi liên tục chúng theo các set đồ vẫn sẽ giúp bạn xây dựng phong cách cá nhân dễ dàng hơn tất thảy.</p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/business-insider-17123346493101376267744.jpg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/business-insider-17123346493101376267744.jpg" alt="" id="myImg">
                         <p class="feature-content">Khi tìm đôi giày đi làm hoàn hảo, độ cao và kiểu dáng được ưu tiên hàng đầu. Nó tôn dáng và dễ dàng phù hợp với mọi loại trang phục từ jeans đến các kiểu quần tây, váy. Số 1 trong lựa chọn là giày cao gót. Nó có thể hơi thiếu thoải mái song nếu là chất liệu da hỗn hợp, da lộn, nhung... sẽ làm chân mềm hơn khiến độ cao của gót dễ chịu hơn</p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/jimmy-choo-roa-hp-jc-world-pump-guide-17123346481761090780651.jpg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/jimmy-choo-roa-hp-jc-world-pump-guide-17123346481761090780651.jpg" alt="" id="myImg">
                         <p class="feature-content">Các kiểu xăng đan luôn lý tưởng với mùa hè. Các loại có trang trí ở dây hoặc buộc dây giúp trang phục công sở điệu đà và thời trang hơn. Đôi xăng đan duyên dáng của Burberry có phần đế chắc chắn và họa tiết trang trí ấn tượng giúp chị em dễ dàng nổi bật ở văn phòng. Loại đế chunky, đế xuồng có độ cao cân bằng giúp thoải mái tối đa và tạo dáng vẻ trẻ trung, năng động, cá tính, phù hợp với các set đồ như sơ mi, baggy...</p>
-                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17123396049791350030056.jpg" alt="">
+                        <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/5/1-17123396049791350030056.jpg" alt="" id="myImg">
                         <p class="feature-content">Hoặc, nếu gu thẩm mỹ thiên về táo bạo, sexy, quyến rũ thì rất có thể các tín đồ cần một đôi nổi bật như giày cao gót có đính nơ của Burberry hoặc giày cao gót mèo con màu đỏ bóng như được thấy ở Gucci. Những thiết kế giày này là lý tưởng với các bộ trang phục phong cách Âu hoặc những chiếc quần ống rộng cá tính và duyên dáng hay cả những chiếc váy bút chì, nữ tính, ngọt ngào.</p>
                     </div>
                 </div>
@@ -362,10 +390,10 @@
                     <h2 class="content__new">7 mẫu áo nên mặc cùng quần jeans xanh</h2>
                     <p class="feature-content">Không bị các xu hướng mới lấn át, quần jeans xanh luôn giữ vị thế ổn định và bền bỉ trong thế giới thời trang. 7 mẫu áo dưới đây có thể mặc cùng chiếc quần denim trứ danh này và theo bạn đi qua cả bốn mùa tươi đẹp.</p>
                     <h3>Áo tank top</h3>
-                    <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/edit-jeans-xanh-jennie-17121155247091444482938.jpeg" alt="">
+                    <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/edit-jeans-xanh-jennie-17121155247091444482938.jpeg" alt="" id="myImg">
                     <p class="feature-content">Mọi It Girl đều diện quần jeans xanh cùng áo thun tank top - kiểu áo dệt kim, co giãn nhẹ với bản vai nhỏ, thường có màu đơn sắc cơ bản như trắng, đen, be hay xám. Jennie BlackPink, Kendall Jenner, Hailey Bieber... đều thường xuyên kết hợp cặp đôi thời trang tối giản này và luôn lọt vào top những cô gái mặc đẹp nhất</p>
                     <h3>Áo nịt ngực (corset)</h3>
-                    <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/jeans-xanh-ninh-duong-lan-ngoc-171211629298064126455.jpg" alt="">
+                    <img class="content-five__img" src="https://images2.thanhnien.vn/528068263637045248/2024/4/3/jeans-xanh-ninh-duong-lan-ngoc-171211629298064126455.jpg" alt="" id="myImg">
                     <p class="feature-content">Áo nịt ngực (áo corset) vẫn là món đồ "hot" trên bản đồ xu hướng thời trang 2024. Khi lựa chọn để phối cùng quần jeans, kiểu áo này nên được tiết chế độ gợi cảm. Tùy theo sắc độ light blue hay dark blue của vải denim mà nàng có thể linh động kết hợp theo ý thích riêng hoặc tham khảo bản phối của cô nàng Ninh Dương Lan Ngọc</p>
 
 

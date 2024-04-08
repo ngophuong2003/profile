@@ -20,6 +20,18 @@ app.get('/dangky', function(req, res) {
     var duongDan=path.join(__dirname,'/views/register.html')
     res.sendFile(duongDan)
 })
+app.get('/trangchu/news', function(req, res) {
+    var duongDan=path.join(__dirname,'/views/index-news.html')
+    res.sendFile(duongDan)
+})
+app.get('/trangchu/world', function(req, res) {
+    var duongDan=path.join(__dirname,'/views/index-world.html')
+    res.sendFile(duongDan)
+})
+app.get('/trangchu/economy', function(req, res) {
+    var duongDan=path.join(__dirname,'/views/index-economy.html')
+    res.sendFile(duongDan)
+})
 
 
 app.post('/dangky',(req,res,next)=>{

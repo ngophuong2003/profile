@@ -199,6 +199,7 @@
 }
 
 .content-one__one {
+  text-align: justify;
   flex: 1;
 }
 
@@ -641,6 +642,7 @@
 }
 
 .category {
+  color:black;
   text-decoration: none;
 }
 

@@ -49,6 +49,7 @@ html {
 }
 
 .content__new:hover {
+    text-align: center;
     color: rgb(109, 105, 105);
     cursor: pointer; /*tạo hình ngón tay trỏ*/
 }

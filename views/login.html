@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tin Linh Tinh</title>
     <!--Gán file base và main-->
-    <link rel="stylesheet" href="./public/base.css">
-    <link rel="stylesheet" href="./public/main.css">
+    <link rel="stylesheet" href="../public/base.css">
+    <link rel="stylesheet" href="../public/main.css">
     <!--Reset CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!--Phông chữ-->
@@ -56,7 +56,8 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--seperate"><a href="./register"> Đăng ký</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--seperate"><a style="text-decoration: none; color: black;" href="./register"> Đăng ký</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
                        
                     </ul>
                 </nav>
@@ -130,7 +131,7 @@
 
                     </div>
                     <div class="auth-form__controls">
-                        <span style="font-size: 15px;">Bạn chưa có tài khoản? <a href="./dangky">Đăng ký ngay</a></span>
+                        <span style="font-size: 15px;">Bạn chưa có tài khoản? <a style="text-decoration: none; color: #ec1111;" href="./dangky">Đăng ký ngay</a></span>
                     </div>
                 </div>
                 <div class="auth-form__socials">
@@ -149,6 +150,29 @@
                 </div>
 
             </form>
+
+            <!--END-->
+            <div class="line"></div>
+            <div class="end">
+                <div class="ending">
+                    <ul class="ending__list">
+                        <li class="ending__item">Hotline</li>
+                        <li class="ending__item ending__hotline">0900 8888</li>
+                        <li class="ending__item">Liên hệ quảng cáo</li>
+                        <li class="ending__item ending__hotline">0990 1234</li>
+                    </ul>
+                </div>
+                <div class="ending">
+                    <p class="ending__name">Tổng biên tập: Vũ Công Duy</p>
+                    <p class="ending__name">Phó tổng biên tập: Trần Long Vũ, Nguyễn Trọng Bình</p>              
+                    <p class="ending__name">Ủy viên ban biên tập: Nguyễn Thái Học</p>
+                    <p class="ending__name">Tổng thư ký tòa soạn: Ngô Phượng</p>
+                </div>
+                <div class="ending">
+                    <p class="ending__name">Giấy phép xuất bản số 110/GP - BTTTT cấp ngày 24.3.2020 © 2003-2024 Bản quyền thuộc về Tin Linh Tinh (cre: Báo Thanh Niên). Cấm sao chép dưới mọi hình thức nếu không có sự chấp thuận bằng văn bản.</p>
+                </div>
+            </div>
+            
             <!-- <script>
                 function checkForm(){
                     const username= document.getElementById('username').value;

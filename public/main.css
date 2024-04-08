@@ -625,6 +625,7 @@
   color: #f1f1f1;
   text-decoration: underline;
   transform: scale(1.2);
+  text-decoration: none;
 }
 
 .overlay .closebtn {
@@ -638,6 +639,11 @@
 .overlay .closebtn:hover {
   cursor: pointer;
 }
+
+.category {
+  text-decoration: none;
+}
+
 
 /* Modal Imgage  */
 
